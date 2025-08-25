@@ -1,0 +1,51 @@
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../assets/images/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 0;
+}
+
+.about-content {
+    background-color: #f8f9fa;
+}
+
+.feature-item {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-primary {
+    color: #344792 !important;
+}
+
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #344792;
+}
+
+.lead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 4rem 0;
+    }
+
+    .blockquote {
+        font-size: 1.25rem;
+    }
+}

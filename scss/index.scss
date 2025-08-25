@@ -1,0 +1,16 @@
+// Archivo principal de estilos - Cancheros Ind
+
+// Base - Variables y mixins primero
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/animaciones';
+
+// Components
+@import 'components/navbar';
+@import 'components/footer'; 
+
+// Layouts
+@import 'layouts/index';
+@import 'layouts/productos';
+@import 'layouts/marcas';
+@import 'layouts/quienes_somos';

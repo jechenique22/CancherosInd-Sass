@@ -1,0 +1,93 @@
+
+
+// botones
+@mixin boton($bg-color, $text-color: $colorTercero, $size: 'medium') {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    border-radius: $border-radius;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: all $transition-normal ease;
+    font-weight: 600;
+    text-align: center;
+    
+    @if $size == 'small' {
+        padding: $spacing-xs $spacing-sm;
+        font-size: $fontSize-small;
+    } @else if $size == 'large' {
+        padding: $spacing-md $spacing-lg;
+        font-size: $fontSize-large;
+    } @else {
+        padding: $spacing-sm $spacing-md;
+        font-size: $fontSize-base;
+    }
+    
+    &:hover {
+        transform: translateY(-2px);
+        // box-shadow: 0 4px 12px rgba($bg-color, 0.3);
+        color: $text-color;
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// cards
+@mixin card($padding: $spacing-md, $shadow: true) {
+    background: $colorTercero;
+    border-radius: $border-radius-lg;
+    padding: $padding;
+    transition: all $transition-normal ease;
+    
+    @if $shadow {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+        &:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+    }
+}
+
+// texto gradient
+@mixin texto-gradient($color1, $color2) {
+    background: linear-gradient(45deg, $color1, $color2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// estilos de enlaces
+@mixin links($fontSize, $fontWeight, $textTransform, $transition, $lineHeight, $position, $top) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    text-transform: $textTransform;
+    transition: $transition;
+    line-height: $lineHeight;
+    position: $position;
+    top: $top;
+    text-decoration: none;
+    color: inherit;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// enlaces reducidos
+@mixin linksReducidos($color, $fontSize, $padding, $transition) {
+    color: $color;
+    font-size: $fontSize;
+    padding: $padding;
+    transition: $transition;
+    text-decoration: none;
+    display: inline-block;
+    
+    &:hover {
+        transform: scale(1.05);
+        color: color.adjust($color, $lightness: 10%); 
+    }
+}

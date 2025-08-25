@@ -1,0 +1,60 @@
+
+// anidaciones - uso de animaciones y variables
+.hero-section {
+    background-color: $colorSecundario;
+    padding: $spacing-xl 0;
+    
+    .hero-content {
+        @include animate(fadeIn, 1s);
+        
+        h1 {
+            color: $colorTercero;
+            font-size: $fontSize-xxl;
+            margin-bottom: $spacing-md;
+        }
+        
+        p {
+            color: $colorTercero;
+            font-size: $fontSize-large;
+            margin-bottom: $spacing-lg;
+        }
+        
+        .cta-button {
+            @include boton($colorPrimario, $colorTercero, 'large');
+            @include animate(pulse, 2s, 1s);
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+.featured-products {
+    padding: $spacing-xl 0;
+    
+    .product-card {
+        @include card;
+        @include animate(slideUp, 0.5s);
+        margin-bottom: $spacing-md;
+        
+        img {
+            width: 100%;
+            border-radius: $border-radius;
+        }
+        
+        h3 {
+            font-size: $fontSize-large;
+            color: $colorSecundario;
+            margin: $spacing-sm 0;
+        }
+        
+        .price {
+            color: $colorPrimario;
+            font-size: $fontSize-base;
+            font-weight: bold;
+        }
+        
+        .buy-button {
+            @include boton($colorCatalogo, $colorTercero, 'small');
+            margin-top: $spacing-sm;
+        }
+    }
+}

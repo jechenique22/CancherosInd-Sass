@@ -1,0 +1,132 @@
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0;
+    margin: 0%;
+}
+
+.list-group-item {
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    /* height: 100px; */
+    border: radius 10px;
+    /* position: fixed; */
+    top: 0;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.buttons li {
+    margin-right: 50px;
+    list-style: none;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: rgba(108, 127, 200, 0.874);
+    letter-spacing: 2px;
+}
+
+.buttons a:hover {
+    color: #cd9695;
+    transform: scale(1);
+    transition: .3s;
+}
+
+/* -- */
+.fondosptos {
+    margin-top: 100px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sale1 {
+    background-image: url(../assets/images/salee\ 6.jpg);
+    margin-top: 100px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.qsomos {
+    text-align: center;
+    color: rgb(52, 71, 146);
+    background-color: black;
+}
+
+.logo-fin2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: rgb(52, 71, 146);
+}
+
+.icono-linea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icono-linea h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.t-nos {
+    margin-top: 100px;
+    margin-bottom: 0px;
+    min-height: calc(100vh - 100px);
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    line-height: 1;
+}
