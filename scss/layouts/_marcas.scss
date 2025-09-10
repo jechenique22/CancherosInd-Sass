@@ -1,0 +1,170 @@
+// uso de anidaciones, mixin, variables
+
+$marca-card-height: 350px;
+$marca-logo-size: 180px;
+$marca-hover-scale: 1.05;
+
+@mixin card-hover-effect {
+    transition: transform $transition-normal, box-shadow $transition-normal;
+    
+    &:hover {
+        transform: translateY(-10px) scale($marca-hover-scale);
+        box-shadow: 0 15px 30px rgba($colorSecundario, 0.15);
+    }
+}
+
+.marcas-hero {
+    background-color: $colorNegro;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.marcas {
+    &__header {
+        text-align: center;
+        margin-bottom: $spacing-lg;
+
+        h1 {
+            color: $colorBlanco;
+            @include animate(slideInDown, 1s);
+        }
+
+        p {
+            color: $colorBlanco;
+            @include animate(slideInUp, 1s);
+        }
+        
+        h1 {
+            color: $colorTercero;
+            font-size: $fontSize-xxl;
+            margin-bottom: $spacing-md;
+            @include animate(fadeIn, 1s);
+        }
+        
+        p {
+            color: rgba($colorTercero, 0.9);
+            font-size: $fontSize-large;
+            max-width: 600px;
+            margin: 0 auto;
+            @include animate(slideUp, 1s, 0.3s);
+        }
+    }
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: $spacing-lg;
+        padding: $spacing-xl 0;
+        
+        &-item {
+            @include card($spacing-md);
+            @include card-hover-effect;
+            height: $marca-card-height;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(45deg, rgba($colorTercero, 0.95), rgba($colorTercero, 1));
+            
+            img {
+                width: $marca-logo-size;
+                height: auto;
+                margin-bottom: $spacing-md;
+                @include animate(fadeIn, 0.5s);
+            }
+            
+            h3 {
+                color: $colorSecundario;
+                font-size: $fontSize-large;
+                margin-bottom: $spacing-sm;
+                font-weight: bold;
+            }
+            
+            p {
+                color: rgba($colorFooter, 0.8);
+                font-size: $fontSize-base;
+                margin-bottom: $spacing-md;
+            }
+            
+            .btn-ver-marca {
+                @include boton($colorPrimario, $colorTercero, 'small');
+                @include animate(pulse, 2s);
+                animation-iteration-count: infinite;
+                
+                &:hover {
+                    background-color: darken($colorPrimario, 10%);
+                }
+            }
+        }
+    }
+    
+    &__featured {
+        background-color: rgba($colorSecundario, 0.05);
+        padding: $spacing-xl 0;
+        margin-top: $spacing-xl;
+        
+        &-header {
+            text-align: center;
+            margin-bottom: $spacing-xl;
+            
+            h2 {
+                color: $colorSecundario;
+                font-size: $fontSize-xl;
+                margin-bottom: $spacing-sm;
+            }
+            
+            p {
+                color: rgba($colorFooter, 0.8);
+                font-size: $fontSize-large;
+            }
+        }
+        
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: $spacing-md;
+            
+            .product-card {
+                @include card;
+                @include card-hover-effect;
+                text-align: center;
+                
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: $border-radius;
+                    margin-bottom: $spacing-sm;
+                }
+                
+                .price {
+                    color: $colorPrimario;
+                    font-weight: bold;
+                    margin: $spacing-xs 0;
+                }
+                
+                .btn-comprar {
+                    @include boton($colorCatalogo, $colorTercero, 'small');
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

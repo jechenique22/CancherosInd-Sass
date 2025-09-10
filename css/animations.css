@@ -1,0 +1,31 @@
+.animate__animated {
+  opacity: 0;
+}
+
+.animate__fadeIn {
+  animation-duration: 1.5s;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

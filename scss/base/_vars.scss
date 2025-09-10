@@ -1,0 +1,46 @@
+$colorMultimedia: #a5740c;
+$colorFooter: #333;
+$lightPinkColor: #ff5f8f;
+$colorCatalogo: #ffac7c;
+$colorPrimario: #c02924;
+$colorSecundario: #203580;
+$colorTercero: #ffffff;
+$colorNegro: #000;
+$colorBlanco: #fff;
+$colorGris: #6c757d;
+
+// fuente
+$fuentePrincipal: 'Nunito', sans-serif;
+$fuenteSecundaria: 'Roboto', sans-serif;
+
+// sizes
+$fontSize-small: 0.875rem;
+$fontSize-base: 1rem;
+$fontSize-large: 1.25rem;
+$fontSize-xl: 2rem;
+$fontSize-xxl: 3rem;
+
+// espaciado
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// bordes
+$border-radius: 8px;
+$border-radius-lg: 15px;
+
+// transiciones
+$transition-fast: 0.2s;
+$transition-normal: 0.3s;
+$transition-slow: 0.5s;
+
+// mapa de colores
+$fuenteDeColor: (
+  naranja: $colorCatalogo,
+  rosa: $lightPinkColor,
+  bordo: $colorMultimedia,
+  primario: $colorPrimario,
+  secundario: $colorSecundario,
+);

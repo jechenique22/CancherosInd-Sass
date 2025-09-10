@@ -1,0 +1,10 @@
+/* para usar extends */
+
+.nav1 {
+    color: antiquewhite;
+    background-color: darkslategray;
+}
+
+.nav {
+    @extend .nav1;
+}
